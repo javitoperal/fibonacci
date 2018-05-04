@@ -1,5 +1,20 @@
 #include <stdio.h>
 
+int traduction(int a){
+	int unidades = 0;
+	int decenas = 0;
+	int centenas = 0;
+	centenas = a/100;
+	decenas = a/10 - centenas*10;
+	unidades = a - decenas*10 - centenas*100;
+	printf("centenas : %i\n", centenas);
+	printf("decenas : %i\n", decenas);
+	printf("unidades : %i\n", unidades);
+
+	
+	return 0;
+}
+
 int fibonacci(int n){
 	int i;
 	int result;
@@ -25,10 +40,13 @@ int fibonacci(int n){
 
 int main() {
 
-	int altocapo = fibonacci(2);
+	traduction(789);
+/*	
+	int altocapo = fibonacci(300);
 	printf("result : %i\n", altocapo);
  
 	printf("Hello World");
+*/
 	return 0;
 }
 
